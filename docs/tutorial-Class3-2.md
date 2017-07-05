@@ -59,3 +59,16 @@ print(response.text)
 1. utf-8
 
 而Windows控制台默认编码为GB2312，错误地混用两种编码就会出现乱码。
+
+### 解决方案
+
+```
+def strdecode(sentence):
+    # 在Python 3中，text_type为str
+    if not isinstance(sentence, text_type):
+        try:
+            sentence = sentence.decode('utf-8')
+        except UnicodeDecodeError:
+            sentence = sentence.decode('gbk', 'ignore')
+    return sentence
+```
