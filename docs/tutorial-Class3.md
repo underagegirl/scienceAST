@@ -13,4 +13,4 @@
 ## HTTP 请求
 
 HTTP请求由三部分组成，分别为：请求行、报文头、请求正文
-![HTTP请求](../img/Class3-1.png)
+![HTTP请求](./img/Class3-1.png)
