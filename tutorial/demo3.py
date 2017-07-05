@@ -1,7 +1,14 @@
+# 导入第三方库requests
 import requests
 
 # 抓取github首页
+# 使用requests库中提供的get方法
+# HTTP请求为GET / HTTP/1.1
+# host 为www.github.com
 response = requests.get("http://www.github.com")
+
+print('判断是否获取成功')
+print(response.ok)
 
 print('输出HTTP Status Code')
 print(response.status_code)
