@@ -6,7 +6,7 @@ title: 网页构成与静态页面爬虫
 ## Python 实践
 
 首先我们来看下抓取网页的python代码
-```
+``` Python
 # 导入第三方库requests
 import requests
 
@@ -23,7 +23,7 @@ print(response.ok)
 至此，我们已经成功获取了github首页的数据信息。
 
 下一步，我们该如何将这些数据输出呢？
-```
+``` Python
 print('输出HTTP Status Code')
 print(response.status_code)
 
@@ -62,7 +62,7 @@ print(response.text)
 
 ### 解决方案
 
-```
+``` Python
 def strdecode(sentence):
     # 在Python 3中，text_type为str
     if not isinstance(sentence, text_type):
