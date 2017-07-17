@@ -70,7 +70,7 @@ True
 请解决以下问题：
 > 输出list1中最长的字符串
 ``` Python
-list1 = ['Beautiful', 'is', 'better', 'than', 'ugly', '.', 'Explicit', 'is', 'better', 'than', 'implicit', '.', 'Simple', 'is', 'better', 'than', 'complex']
+list1 = ['Beautiful', 'is', 'better', 'than', 'ugly', '.', 'Explicit', 'is', 'better', 'than', 'implicit', '.', 'Simple', 'is', 'better', 'than', 'complex', '.']
 ```
 
 实现一
