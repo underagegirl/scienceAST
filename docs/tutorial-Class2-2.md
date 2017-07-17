@@ -155,6 +155,7 @@ print(myAdd(-1, 10, abs))
 
 再看一个更为实际的应用：
 > 实现对list1中的字符串按长度排序
+
 ``` Python
 list1 = ['Beautiful', 'is', 'better', 'than', 'ugly', '.', 'Explicit', 'is', 'better', 'than', 'implicit', '.', 'Simple', 'is', 'better', 'than', 'complex', '.']
 
