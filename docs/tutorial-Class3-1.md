@@ -1,5 +1,5 @@
 ---
-title: 网页构成与静态页面爬虫
+title: 网页构成
 ---
 # HTTP协议
 
@@ -26,7 +26,7 @@ HTTP URL格式为:
 
 HTTP请求由三部分组成，分别为：请求行、报文头、请求正文
 
-![HTTP请求](./img/Class3-1.png)
+![HTTP请求](http://blog-1252574286.cossh.myqcloud.com/scienceAST/Class3-1.png)
 
 * 请求行
 
@@ -59,9 +59,9 @@ HTTP请求由三部分组成，分别为：请求行、报文头、请求正文
 
 HTTP响应也是由三个部分组成，分别是：状态行、响应报头、响应正文
 
-![HTTP响应](./img/Class3-2.png)
+![HTTP响应](http://blog-1252574286.cossh.myqcloud.com/scienceAST/Class3-2.png)
 
-![HTTP响应正文](./img/Class3-3.png)
+![HTTP响应正文](http://blog-1252574286.cossh.myqcloud.com/scienceAST/Class3-3.png)
 
 * 状态行
 
