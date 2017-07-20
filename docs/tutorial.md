@@ -15,3 +15,6 @@ title: 新生教程目录
 * Class 4 网页的信息提取
 * Class 5 数据的存储
 * Class 6 **实践**:实现一个特定功能的小爬虫
+
+# QR Code
+![tutorial-qrcode](http://blog-1252574286.cossh.myqcloud.com/scienceAST/tutorial-qrcode.png)
