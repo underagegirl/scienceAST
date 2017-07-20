@@ -23,9 +23,9 @@ title: 正则表达式
 [re](https://docs.python.org/3/library/re.html)是Python标准库提供的，用于处理正则表达式的库。
 
 ### match
-`re.match(pattern, string)`
+`re.match(pattern, string, flags=0)`
 
-match函数会从`string`的第一字符开始，匹配`pattern`所给出的规则：
+match函数会从`string`的第一个字符开始，匹配`pattern`所给出的规则：
 * 若在匹配过程中，遇到一个不符合规则的字符，直接结束匹配，并返回None
 * 若在匹配过程中，`string`长度小于`pattern`所要求长度，结束匹配过程，并返回None
 * 若没有发生上述两种情况，成功匹配完的，则会返回一个包含匹配的字符串以及其在原字符串中的位置信息的对象，不再继续向后匹配。
@@ -80,4 +80,66 @@ match2 fail!
 match3 fail!
 ('2017-07-20', '11:22:33')
 {'data': '2017-07-20'}
+```
+
+### search
+`re.search(pattern, string, flags=0)`
+
+search函数的工作方式与match相似，区别是search不是从字符串的第一个字符开始匹配，而是搜索整个字符串，直到找到第一个满足`pattern`的字符开始匹配。
+
+Example(来自[官方文档](https://docs.python.org/3/library/re.html#search-vs-match)):
+``` Python
+re.match("c", "abcdef")    # No match
+re.search("^c", "abcdef")  # No match
+re.search("^a", "abcdef")  # Match
+```
+
+### split
+`re.split(pattern, string, maxsplit=0, flags=0)`
+
+split函数能以可匹配的子字符串作为分割界限，以list形式返回分割后在字符串。
+
+参数`maxsplit`表示最大分割次数
+
+Example:
+``` Python
+re.split(r'-', '2017-07-21')
+
+# Result
+# ['2017', '07', '21']
+```
+
+### findall
+`re.findall(pattern, string, flags=0)`
+
+findall函数能搜索整个字符串，以list形式返回所有匹配的字符串。
+
+Example:
+``` Python
+re.findall(r'\d+', '2017-07-21')
+
+# Result
+# ['2017', '07', '21']
+```
+
+### finditer
+`re.finditer(pattern, string, flags=0)`
+
+finditer和findall作用相同，只不过是以迭代器形式返回结果。
+
+### sub
+`re.sub(pattern, repl, string, count=0, flags=0)`
+
+sub函数可以将原字符串中所匹配的子字符串用新字符串替换。
+* pattern 正则表达式
+* repl 替换字符串
+* string 原字符串
+* count 替换次数，为0时全部替换
+
+Example:
+``` Python
+re.sub(r'world', 'python', 'hello world')
+
+# Result
+# 'hello python'
 ```
