@@ -2,8 +2,8 @@
 title: 新生教程目录
 ---
 
-# 教程
-
+# 新生教程
+持续更新中……
 * Class 1 介绍数据处理的流程和应用
 > [配置环境](./tutorial-Class1)
 * Class 2 Python 基础
@@ -17,4 +17,4 @@ title: 新生教程目录
 * Class 6 **实践**:实现一个特定功能的小爬虫
 
 # QR Code
-![tutorial-qrcode](http://blog-1252574286.cossh.myqcloud.com/scienceAST/tutorial-qrcode.png)
+![tutorial-qrcode](./img/tutorial-qrcode.png)
