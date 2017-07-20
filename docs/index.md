@@ -9,3 +9,4 @@ title: 理学院科协
 # 教程
 
 * [新生教程](./tutorial)
+>![tutorial-qrcode](http://blog-1252574286.cossh.myqcloud.com/scienceAST/tutorial-qrcode.png)
