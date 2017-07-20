@@ -41,8 +41,8 @@ title: 理学院科协
 
 1. Python基础
 
-    * 基础数据类型(number, str, boolean, object)
-    * 基础数据结构(tuple, list, dict)
+    * 基础数据类型(数字, 字符串, 布尔值, object)
+    * 基础数据结构(数组, 链表, 二叉树, Hash表)
     * 控制语句(if, for, while)
     * 函数调用, 成员访问
     * 安装和使用第三方库(pip, conda)
