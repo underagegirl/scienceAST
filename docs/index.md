@@ -3,12 +3,13 @@ title: 理学院科协
 ---
 
 # 理学院科协
+## 数据处理小组
 
 * [工作计划](./task)
 
-# 教程
+## 教程
 
 * [新生教程](./tutorial)
 
 # QR Code
-![index-qrcode](http://blog-1252574286.cossh.myqcloud.com/scienceAST/index-qrcode.png)
+![index-qrcode](./img/index-qrcode.png)
