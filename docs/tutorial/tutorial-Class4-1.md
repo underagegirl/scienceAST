@@ -146,7 +146,7 @@ re.sub(r'world', 'python', 'hello world')
 
 ### flags
 可以看到之前所以的函数中都有一个参数flags，它是用来配置正则表达式的匹配模式的。
->取值可以使用按位或运算符’|’表示同时生效，比如re.I | re.M。(来自[静觅](http://cuiqingcai.com/977.html))
+>取值可以使用按位或运算符`|`表示同时生效，比如`re.I | re.M`。(来自[静觅](http://cuiqingcai.com/977.html))
 
  * re.I(全拼：IGNORECASE): 忽略大小写（括号内是完整写法，下同）
  * re.M(全拼：MULTILINE): 多行模式，改变'^'和'$'的行为
