@@ -7,7 +7,7 @@ title: 新生教程目录
 * Class 1 介绍数据处理的流程和应用
 > [配置环境](./tutorial/tutorial-Class1)
 * Class 2 Python 基础
-> [Python基础](./tutorial/tutorial-Class2-1)
+> [Python基础]()
 > [Python进阶](./tutorial/tutorial-Class2-2)
 * Class 3 网页构成与静态页面爬虫
 > [HTTP与HTML](./tutorial/tutorial-Class3-1)
