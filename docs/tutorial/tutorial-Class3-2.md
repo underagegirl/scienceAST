@@ -2,7 +2,7 @@
 title: 静态页面爬虫
 ---
 # 静态页面爬虫
-
+本篇[样例代码](https://github.com/yiluomyt/scienceAST/blob/master/tutorial/demo3.py)、[运行结果](https://github.com/yiluomyt/scienceAST/blob/master/tutorial/demo3.txt)见此。
 ## Python 实践
 
 首先我们来看下抓取网页的python代码
