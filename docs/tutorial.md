@@ -14,7 +14,11 @@ title: 新生教程目录
 > [静态页面爬虫](./tutorial/tutorial-Class3-2)
 * Class 4 网页的信息提取
 > [正则表达式](./tutorial/tutorial-Class4-1)
+> [XPath与CSS选择器]()
 * Class 5 数据的存储
+> [文件操作与csv]()
+> [sqlite3]()
+> [MongoDB]()
 * Class 6 **实践**:实现一个特定功能的小爬虫
 
 # QR Code
