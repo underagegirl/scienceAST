@@ -1,5 +1,6 @@
 ---
 title: 正则表达式
+qrcode: True
 code_url: /tutorial/demo4-re-match.py
 ---
 

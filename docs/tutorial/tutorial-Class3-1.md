@@ -1,5 +1,6 @@
 ---
 title: 网页构成
+qrcode: True
 ---
 # HTTP协议
 

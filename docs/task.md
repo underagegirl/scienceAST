@@ -1,5 +1,6 @@
 ---
 title: 工作安排
+qrcode: True
 ---
 # 协会部门
 

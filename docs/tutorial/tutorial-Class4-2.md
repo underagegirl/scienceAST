@@ -1,5 +1,6 @@
 ---
 title: XPath与CSS 选择器
+qrcode: True
 ---
 
 # XPath与CSS 选择器

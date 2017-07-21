@@ -1,5 +1,6 @@
 ---
 title: 静态页面爬虫
+qrcode: True
 code_url: /tutorial/demo3.py
 ---
 # 静态页面爬虫
