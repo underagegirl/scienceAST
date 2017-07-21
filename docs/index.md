@@ -2,8 +2,8 @@
 show_downloads: True
 ---
 
-# 理学院科协
-## 数据处理小组
+# 理学院科协|Data Processing小组
+## 
 
 * [工作计划](./task)
 
