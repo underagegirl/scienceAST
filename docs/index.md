@@ -1,4 +1,5 @@
 ---
+title: 理学院科协
 show_downloads: True
 ---
 
