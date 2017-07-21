@@ -60,17 +60,25 @@ print(response.text)
 1. GBK
 1. utf-8
 
-而Windows控制台默认编码为GB2312，错误地混用两种编码就会出现乱码。
+使用错误的方式去解码就会产生乱码
+>上一节中response.text是基于response.encoding对response.content解码产生的。
+>即`response.text`等同于`response.content.decode(response.encoding)`
+>
+>若出现response.text乱码,可以尝试手动对response.content解码。
 
 ### 解决方案
-
+该函数引用自[jieba分词](https://github.com/fxsjy/jieba)，经过小幅修改。
 ``` Python
 def strdecode(sentence):
-    # 在Python 3中，text_type为str
-    if not isinstance(sentence, text_type):
+    # 判断所传入的sentence是否需要解码
+    # 在Python 3中，str保存的即为unicode编码，所以不需要解码
+    if not isinstance(sentence, str):
         try:
+            # 尝试使用UTF-8解码
             sentence = sentence.decode('utf-8')
         except UnicodeDecodeError:
+            # 使用GBK解码并忽略产生的错误
             sentence = sentence.decode('gbk', 'ignore')
     return sentence
 ```
+若想使用该函数自动判断解码方式的话，需要传入的对象为`response.content`。

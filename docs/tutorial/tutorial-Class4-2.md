@@ -10,4 +10,6 @@ qrcode: True
 
 关于[XPath](http://www.w3school.com.cn/xpath/xpath_intro.asp)和[CSS 选择器](http://www.w3school.com.cn/cssref/css_selectors.asp)的语法网上已经有不少教程，所以在此就不再赘述。我们主要来看XPath和CSS 选择器在Python中的使用方法。
 
+在本篇中，主要使用到两个第三方库BeautifulSoup和lxml，可以使用pip安装。
+
 # XPath
