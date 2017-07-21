@@ -1,5 +1,6 @@
 ---
 title: Python 基础
+published: False
 ---
 
 本节内容可到[runoob](http://www.runoob.com/python/python-tutorial.html)或[廖雪峰博客](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/)自学
