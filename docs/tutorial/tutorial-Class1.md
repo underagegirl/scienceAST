@@ -1,5 +1,6 @@
 ---
 title: 准备工作
+qrcode: True
 ---
 
 # 开发环境
