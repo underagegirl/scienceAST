@@ -2,7 +2,7 @@
 title: Python 基础
 ---
 
-本节内容可到[网址](http://www.runoob.com/python/python-tutorial.html)或[网址](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/)自学
+本节内容可到[runoob](http://www.runoob.com/python/python-tutorial.html)或[廖雪峰博客](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/)自学
 
 # 基础数据类型(Number, String , Boolean , Object)
 ## Number(数值)
@@ -36,7 +36,7 @@ python中数字类型分为三种：整型(integers)、浮点型(floating point 
 ## String(字符串)
 用python编写字符串输出时一定要转为'utf-8'格式，因为中文编码超出了ASCII编码的范围，python会报错！
 
-关于python字符串的操作与内置方法，可到这个[网页](http://www.runoob.com/python/python-strings.html)进行学习。
+关于python字符串的操作与内置方法，可到这个[runoob](http://www.runoob.com/python/python-strings.html)进行学习。
 
 ## Boolean(布尔值)
 布尔是整数的一个子类型,它的返回值为True或者False.
@@ -56,7 +56,7 @@ python中所有变量都是对象,所有对象都基于object类.
 
 # 基础数据结构(list , tuple , dict)
 ## list
-list是一个可变的序列表，可以随时添加和删除其中的元素，可进行包括索引，切片，加，乘，检查成员等操作,详细信息请点击此[网址](http://www.runoob.com/python/python-lists.html)进行自学。
+list是一个可变的序列表，可以随时添加和删除其中的元素，可进行包括索引，切片，加，乘，检查成员等操作,详细信息请点击此[runoob](http://www.runoob.com/python/python-lists.html)进行自学。
 
 注：列表排序的两种方法：
 > 1. list.sort()

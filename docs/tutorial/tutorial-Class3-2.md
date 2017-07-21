@@ -1,5 +1,6 @@
 ---
 title: 静态页面爬虫
+code_url: /tutorial/demo3.py
 ---
 # 静态页面爬虫
 本篇[样例代码](https://github.com/yiluomyt/scienceAST/blob/master/tutorial/demo3.py)、[运行结果](https://github.com/yiluomyt/scienceAST/blob/master/tutorial/demo3.txt)见此。
