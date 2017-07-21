@@ -1,5 +1,6 @@
 ---
 show_downloads: True
+qrcode: True
 ---
 
 # 理学院科协|Data Processing小组
