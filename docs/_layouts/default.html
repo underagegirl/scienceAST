@@ -26,11 +26,11 @@
 
     <section class="main-content">
       {{ content }}
-      {% if page.qrcode %}
+      {% if { page.qrcode | default: site.qrcode} %}
         <script src="https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js"></script>
         <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
         <h1>QR Code</h1>
-          <div id="qrcode">
+          <div id="qrcode" style="margin-bottom: 1em;">
             <script>
               $('#qrcode').qrcode({
                       width:256,
