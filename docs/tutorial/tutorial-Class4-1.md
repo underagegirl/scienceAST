@@ -159,4 +159,4 @@ re.sub(r'world', 'python', 'hello world')
 
  ## 思考
  1. re模块的使用方式有多种，请掌握至少一种使用方法
- 1. 使用正则表达式提取[it之家首页](https://www.ithome.com/)的新闻标题
+ 1. 使用正则表达式提取[腾讯新闻首页](http://news.qq.com/)的新闻标题
