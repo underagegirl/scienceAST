@@ -13,3 +13,37 @@ qrcode: True
 在本篇中，主要使用到两个第三方库BeautifulSoup和lxml，可以使用pip安装。
 
 # XPath
+我们可以通过lxml库来使用XPath语句
+
+Example:
+``` Python
+# 导入lxml中的etree类
+from lxml import etree
+# html为包含网页html代码的str对象
+# 由HTML创建文档树
+selector = etree.HTML(html)
+# 使用XPath语句
+xpath_result = selector.xpath('//*[@class="content-list-item"]/div/div/a/text()')
+# 打印XPath结果
+print("Here is the result of xpath:")
+for i, item in enumerate(xpath_result):
+    print("%-2d: %s" % (i, item))
+```
+
+# CSS 选择器
+我们可以通过BeautifulSoup来使用CSS 选择器
+
+Example:
+``` Python
+# 由HTML创建soup对象,使用lxml解析器
+soup = BeautifulSoup(html, 'lxml')
+# 使用CSS 选择器
+# select 所返回的为包含bs4.element.Tag的list
+css_result = soup.select('.content-list-item > div > div > a')
+# 提取Tag的text
+css_result_text = [tag.text for tag in css_result]
+# 打印CSS Selector结果
+print("Here is the result of css selector:")
+for i, item in enumerate(css_result_text):
+    print("%-2d: %s" % (i, item))
+```
