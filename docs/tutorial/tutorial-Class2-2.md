@@ -1,6 +1,5 @@
 ---
 title: Python 进阶
-qrcode: True
 ---
 
 本篇部分代码参考自《Natural Language Processing with Python》

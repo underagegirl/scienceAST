@@ -1,6 +1,7 @@
 ---
 title: XPath与CSS 选择器
 qrcode: True
+codes: {"Example":"/tutorial/demo4-2.py", "Result":"/tutorial/demo4-2.txt"}
 ---
 
 # XPath与CSS 选择器

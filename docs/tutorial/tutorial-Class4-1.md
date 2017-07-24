@@ -1,6 +1,6 @@
 ---
 title: 正则表达式
-codes: {"re.match样例":"/tutorial/demo4-re-match.py"}
+codes: {"re.match Example":"/tutorial/demo4-re-match.py"}
 ---
 
 # 网页信息提取
@@ -32,7 +32,8 @@ match函数会从`string`的第一个字符开始，匹配`pattern`所给出的�
 * 若没有发生上述两种情况，成功匹配完的，则会返回一个包含匹配的字符串以及其在原字符串中的位置信息的对象，不再继续向后匹配。
 
 如以下代码:
-``` Python
+
+```Python
 import re
 
 # 匹配成功
@@ -89,11 +90,14 @@ match3 fail!
 search函数的工作方式与match相似，区别是search不是从字符串的第一个字符开始匹配，而是搜索整个字符串，直到找到第一个满足`pattern`的字符开始匹配。
 
 Example(来自[官方文档](https://docs.python.org/3/library/re.html#search-vs-match)):
+{% highlight Python linenos %}
 ``` Python
 re.match("c", "abcdef")    # No match
 re.search("^c", "abcdef")  # No match
 re.search("^a", "abcdef")  # Match
 ```
+{% endhighlight %}
+
 
 ### split
 `re.split(pattern, string, maxsplit=0, flags=0)`

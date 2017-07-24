@@ -1,5 +1,6 @@
 ---
 title: 新生教程目录
+qrcode: false
 ---
 
 # 新生教程
