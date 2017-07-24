@@ -1,7 +1,6 @@
 ---
 title: 正则表达式
-qrcode: True
-code_url: /tutorial/demo4-re-match.py
+codes: {"re.match样例":"/tutorial/demo4-re-match.py"}
 ---
 
 # 网页信息提取

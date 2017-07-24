@@ -1,6 +1,6 @@
 ---
 title: 理学院科协
-show_downloads: True
+show_on_github: true
 ---
 
 # 数据处理 小组
