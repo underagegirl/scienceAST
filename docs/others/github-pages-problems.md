@@ -57,6 +57,7 @@ description: Github Pages使用过程中的一些小问题
                 foreground: "#50abab",
                 text: document.URL
         });
+        </script>
     </div>
     ```
 1. 其中，`width`和`height`根据你所需要的尺寸来设置,`foreground`为二维码所显示的颜色(这么简单的代码，当然只是单色二维码咯,,ԾㅂԾ,,)，`correctLevel`的话，对于不添加任何修饰的二维码而言，设置最低就行了。
