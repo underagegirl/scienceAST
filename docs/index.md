@@ -12,6 +12,7 @@ qrcode: false
 # 教程
 
 * [新生教程](./tutorial)
+* [杂谈](./others)
 
 # QR Code
 ![index-qrcode](./img/index-qrcode.png)
