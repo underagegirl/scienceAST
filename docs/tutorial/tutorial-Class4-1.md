@@ -32,8 +32,8 @@ match函数会从`string`的第一个字符开始，匹配`pattern`所给出的�
 * 若没有发生上述两种情况，成功匹配完的，则会返回一个包含匹配的字符串以及其在原字符串中的位置信息的对象，不再继续向后匹配。
 
 如以下代码:
-
-{% highlight Python linenos %}
+```
+{% highlight Python %}
 import re
 
 # 匹配成功
@@ -73,16 +73,16 @@ if match4:
 else:
     print('match4 fail!')
 {% endhighlight %}
-
+```
 运行结果:
-``` Python
+{% highlight Python %}
 hello
 (0, 5)
 match2 fail!
 match3 fail!
 ('2017-07-20', '11:22:33')
 {'data': '2017-07-20'}
-```
+{% endhighlight %}
 
 ### search
 `re.search(pattern, string, flags=0)`
@@ -91,11 +91,11 @@ search函数的工作方式与match相似，区别是search不是从字符串的
 
 Example(来自[官方文档](https://docs.python.org/3/library/re.html#search-vs-match)):
 {% highlight Python linenos %}
-``` Python
+{% highlight Python %}
 re.match("c", "abcdef")    # No match
 re.search("^c", "abcdef")  # No match
 re.search("^a", "abcdef")  # Match
-```
+{% endhighlight %}
 {% endhighlight %}
 
 
@@ -107,12 +107,12 @@ split函数能以可匹配的子字符串作为分割界限，以list形式返�
 参数`maxsplit`表示最大分割次数
 
 Example:
-``` Python
+{% highlight Python %}
 re.split(r'-', '2017-07-21')
 
 # Result
 # ['2017', '07', '21']
-```
+{% endhighlight %}
 
 ### findall
 `re.findall(pattern, string, flags=0)`
@@ -120,12 +120,12 @@ re.split(r'-', '2017-07-21')
 findall函数能搜索整个字符串，以list形式返回所有匹配的字符串。
 
 Example:
-``` Python
+{% highlight Python %}
 re.findall(r'\d+', '2017-07-21')
 
 # Result
 # ['2017', '07', '21']
-```
+{% endhighlight %}
 
 ### finditer
 `re.finditer(pattern, string, flags=0)`
@@ -142,12 +142,12 @@ sub函数可以将原字符串中所匹配的子字符串用新字符串替换�
 * count 替换次数，为0时全部替换
 
 Example:
-``` Python
+{% highlight Python %}
 re.sub(r'world', 'python', 'hello world')
 
 # Result
 # 'hello python'
-```
+{% endhighlight %}
 
 ### flags
 可以看到之前所以的函数中都有一个参数flags，它是用来配置正则表达式的匹配模式的。
