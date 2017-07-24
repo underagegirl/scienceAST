@@ -9,3 +9,4 @@ description: 技术杂货铺
 如有兴趣具体探讨的话，欢迎联系: [mytyiluo@outlook.com](mailto:mytyiluo@outlook.com)
 
 * [Github Pages使用过程中的一些小问题](./others/github-pages-problems)
+* [Python学习笔记](./others/python-notebook)
