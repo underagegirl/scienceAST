@@ -27,11 +27,11 @@ description: Github Pages使用过程中的一些小问题
 步骤也很简单:
 
 1. 在模板文件的`<head>`中添加三行代码。
-``` html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-```
+    ``` html
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    ```
 1. 然后提交，等Github Pages重新生成后刷新即可。
 
 # 添加二维码
@@ -44,20 +44,20 @@ description: Github Pages使用过程中的一些小问题
 因为也是直接调用第三方库的，所以步骤一如既往的简单:
 
 1. 在你想要添加二维码的位置，添加以下代码:
-``` html
-<script src="https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
-<div id="qrcode">
-    <script>
-    $('#qrcode').qrcode({
-            width:256,
-            height:256,
-            render: "canvas",
-            correctLevel: 0,
-            foreground: "#50abab",
-            text: document.URL
-    });
-```
+    ``` html
+    <script src="https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <div id="qrcode">
+        <script>
+        $('#qrcode').qrcode({
+                width:256,
+                height:256,
+                render: "canvas",
+                correctLevel: 0,
+                foreground: "#50abab",
+                text: document.URL
+        });
+    ```
 1. 其中，`width`和`height`根据你所需要的尺寸来设置,`foreground`为二维码所显示的颜色(这么简单的代码，当然只是单色二维码咯,,ԾㅂԾ,,)，`correctLevel`的话，对于不添加任何修饰的二维码而言，设置最低就行了。
 1. 但是，以这种形式添加二维码的话，有两个弊病：
     1. 不能显示中文URL。
