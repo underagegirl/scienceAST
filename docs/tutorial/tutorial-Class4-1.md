@@ -33,7 +33,7 @@ match函数会从`string`的第一个字符开始，匹配`pattern`所给出的�
 
 如以下代码:
 
-```Python
+{% highlight Python linenos %}
 import re
 
 # 匹配成功
@@ -72,7 +72,7 @@ if match4:
     print(match4.groupdict())
 else:
     print('match4 fail!')
-```
+{% endhighlight %}
 
 运行结果:
 ``` Python
