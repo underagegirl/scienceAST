@@ -11,8 +11,17 @@ items = soup.select('#active_div > ul > li > div > a')
 # 提取活动标题以及活动地址
 actives = [(i, item.text, item.get('href')) for i, item in enumerate(items)]
 # 打开文件
-with open('./demo5-1.csv', 'w', encoding='utf-8') as f:
+# TODO: newline作用
+with open('./demo5-1.csv', 'w', newline='', encoding='utf-8') as f:
     # 创建CSV写入器
     writer = csv.writer(f)
     # 写入多行数据
     writer.writerows(actives)
+
+# 打开文件
+with open('./demo5-1.csv', 'r', encoding='utf-8') as f:
+    # 创建CSV读取器
+    reader = csv.reader(f)
+    # 读取CSV文件数据
+    for row in reader:
+        print(row)
