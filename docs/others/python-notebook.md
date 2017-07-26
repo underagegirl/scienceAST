@@ -3,95 +3,94 @@ title: Python学习笔记
 description: 隔壁老王|1303024845@qq.com
 ---
 
-## dict和set
-### dict
-1. 
+# dict和set
+## dict
+1. 使用key读取dict中的元素
+    ``` Python
+    d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}  
+    d['Michael']
 
-``` Python
-d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}  
-d['Michael']
+    # Result
+    # 95
+    ```
 
-# Result
-# 95
-```
-2. 
+1. 修改dict中的元素
+    ``` Python
+    d['Adam'] = 67  
+    d['Adam']
 
-``` Python
-d['Adam'] = 67  
-d['Adam']
+    # Result
+    # 67
+    ```
+1. dict中一个key只能对应一个value
 
-# Result
-# 67
-```
-3. dict中一个key只能对应一个value
+1. 用in判断key是否存在
 
-4. 用in判断key是否存在
+    例如：
 
-例如：
+    ``` Python
+    'Thomas' in d
 
-``` Python
-'Thomas' in d
+    # Result
+    # False
+    ```
+1. 要删除一个key，用pop(key)方法，对应的value也会从dict中删除(是删除key,不是删除value)
 
-# Result
-# False
-```
-5. 
-要删除一个key，用pop(key)方法，对应的value也会从dict中删除(是删除key,不是删除value)
-例如：d.pop('Bob')
+    例如：`d.pop('Bob')`
 
-6. 
-从dict中可以用get函数(get是成员函数)
-例如：
-``` Python
-d = {'a':2}  
-d.get('b')  
-d.get('a')
+1. 从dict中可以用get函数(get是成员函数)
+    例如：
+    ``` Python
+    d = {'a':2}  
+    d.get('b')  
+    d.get('a')
 
-None  1
-```
-### set
-1. 
-set和dict类似，也是一组key的集合，但不存储value。在set中没有重复的key(key不重复)
+    # Result
+    # None  1
+    ```
+## set
+1. set和dict类似，也是一组key的集合，但不存储value。在set中没有重复的key(key不重复)
 
-2. 
-要创建一个set，需要提供一个list作为输入集合
-例如：
-``` Python
-s = set([1,2,3])
-s
+1. 要创建一个set，需要提供一个list作为输入集合
+    例如：
+    ``` Python
+    s = set([1,2,3])
+    print(s)
 
-{1,2,3}
-```
-3. 
-重复元素在set中自动被过滤
+    # Result
+    # {1,2,3}
+    ```
+1. 重复元素在set中自动被过滤
 
-4. 
-add(key)方法可以添加元素到set中
-例如：
-``` Python 
-s = set([1,2,3])  
-s.add(4)   
-s   
- 
-{1,2,3,4}
-```
-添加重复的没有效果
+1. add(key)方法可以添加元素到set中(添加重复的没有效果)
 
-5. 
-remove(key)用于删除元素，用法与get一样
+    例如：
+    ``` Python 
+    s = set([1,2,3])  
+    s.add(4)   
+    print(s)   
+    
+    # Result
+    # {1,2,3,4}
+    ```
 
-6. 
-两个set可做数学意义上的交集，并集等操作
-例如：
-``` Pyhton  
-s1 = set([1,2,3])  
-s2 = set([2,3,4])   
-s1 & s2  
-s1 | s2
+1. remove(key)用于删除元素，用法与get一样
 
-{2,3}  
-{1,2,3,4}
-```
+1. 两个set可做数学意义上的交集，并集等操作
+    
+    例如：
+    ``` Pyhton  
+    s1 = set([1,2,3])
+    s2 = set([2,3,4]) 
+    # 交集操作
+    print(s1 & s2)
+    # 并集操作
+    print(s1 | s2)
+
+    # Result
+    # {2,3}  
+    # {1,2,3,4}
+    ```
 ### 可变和不可变对象
 1. 
 list可变，对list进行改变list变化，而对不可变对象例如str进行替换原str不变
