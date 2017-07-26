@@ -1,313 +1,275 @@
 ---
 title: Python学习笔记
-description: 隔壁老王
+description: 隔壁老王|1303024845@qq.com
 ---
 
 ## dict和set
 ### dict
-* 1
+1. 
+``` Python
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}  
+d['Michael']
 
-    输入d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}  
-　　d['Michael']
+# Result
+# 95
+```
+2. 
+``` Python
+d['Adam'] = 67  
+d['Adam']
 
-    输出　95
+67
+```
+3. 
+dict中一个key只能对应一个value
 
-* 2
+4. 
+用in判断key是否存在
+例如：
+``` Python
+'Thomas' in d
 
-    输入d['Adam'] = 67  
-    输入d['Adam']
+False
+```
+5. 
+要删除一个key，用pop(key)方法，对应的value也会从dict中删除(是删除key,不是删除value)
+例如：d.pop('Bob')
 
-    输出67
+6. 
+从dict中可以用get函数(get是成员函数)
+例如：
+``` Python
+d = {'a':2}  
+d.get('b')  
+d.get('a')
 
-* 3
-
-    dict中一个key只能对应一个value
-
-* 4
-
-    用in判断key是否存在
-
-    例如：输入'Thomas' in d
-
-    输出False
-
-* 5
-
-    要删除一个key，用pop(key)方法，对应的value也会从dict中删除(是删除key,不是删除value)
-
-    例如：d.pop('Bob')
-
-* 6
-
-    从dict中可以用get函数(get是成员函数)
-
-    例如：输入  
-    d = {'a':2}  
-    d.get('b')  
-    d.get('a')
-
-    输出　None  1
-
+None  1
+```
 ### set
-* 1
+1. 
+set和dict类似，也是一组key的集合，但不存储value。在set中没有重复的key(key不重复)
 
-    set和dict类似，也是一组key的集合，但不存储value。在set中没有重复的key(key不重复)
+2. 
+要创建一个set，需要提供一个list作为输入集合
+例如：
+``` Python
+s = set([1,2,3])
+s
 
-* 2
+{1,2,3}
+```
+3. 
+重复元素在set中自动被过滤
 
-    要创建一个set，需要提供一个list作为输入集合
+4. 
+add(key)方法可以添加元素到set中
+例如：
+``` Python 
+s = set([1,2,3])  
+s.add(4)   
+s   
+ 
+{1,2,3,4}
+```
+添加重复的没有效果
 
-    例如：s = set([1,2,3])
-    s
-    {1,2,3}
+5. 
+remove(key)用于删除元素，用法与get一样
 
-* 3
+6. 
+两个set可做数学意义上的交集，并集等操作
+例如：
+``` Pyhton  
+s1 = set([1,2,3])  
+s2 = set([2,3,4])   
+s1 & s2  
+s1 | s2
 
-    重复元素在set中自动被过滤
-
-* 4
-
-    add(key)方法可以添加元素到set中
-
-    例如：输入  
-    s = set([1,2,3])  
-    s.add(4)   
-    s   
-    输出  
-    {1,2,3,4}
-
-    添加重复的没有效果
-
-* 5
-
-    remove(key)用于删除元素，用法与get一样
-
-* 6
-
-    两个set可做数学意义上的交集，并集等操作
-
-    例如：输入  
-    s1 = set([1,2,3])  
-    s2 = set([2,3,4])   
-    s1 & s2  
-    输出  
-    {2,3}  
-    输入  
-    s1 | s2  
-    输出  
-    {1,2,3,4}
-
+{2,3}  
+{1,2,3,4}
+```
 ### 可变和不可变对象
-* 1
-
-    list可变，对list进行改变list变化，而对不可变对象例如str进行替换原str不变
+1. 
+list可变，对list进行改变list变化，而对不可变对象例如str进行替换原str不变
 
 ## 函数
 ### 调用函数
-* 1
+1. 
+函数名其实就是指向一个函数对象的引用，完全可以把函数名赋给一个变量，相当于给这个函数起了一个“别名”
+例如：
+``` Python
+a = abs
+a(-1)
 
-    函数名其实就是指向一个函数对象的引用，完全可以把函数名赋给一个变量，相当于给这个函数起了一个“别名”
-    例如：a = abs
-    a(-1)
-    1
+1
+```
+2. 
+数据类型转换
+``` Python
+int('123')
 
-* 2
+123
 
-    数据类型转换
+int(12.34)
 
-    **input:   int('123')**
+12
 
-    output:  123
+float('12.34')
 
-    **input:   int(12.34)**
+12.34
 
-    output:  12
+str(1.23)
 
-    **input:   float('12.34')**
+'1.23'
 
-    output:  12.34
+str(100)
 
-    **input:   str(1.23)**
+'100'
 
-    output:  '1.23'
+bool(1)
 
-    **input:   str(100)**
+True
 
-    output:  '100'
+bool('')
 
-    **input:   bool(1)**
-
-    output:  True
-
-    **input:   bool('')**
-
-    output:  False
-
+False
+```
 ### 递归函数
-* 1
+1. 
+在一个函数内部调用自身，这个函数就是递归函数
+例如：计算阶乘
+``` Python
+def fact(n):  
+    if n == 1:  
+        return 1  
+    return n * fact(n-1) 
+``` 
+可能栈溢出
+进行尾递归优化 
+``` Python 
+def fact(n):  
+    return fact_iter(n, 1)
 
-    在一个函数内部调用自身，这个函数就是递归函数
-    例如：计算阶乘
-    def fact(n):  
-    　　if n == 1:  
-    　　　　 return 1  
-    　　return n * fact(n-1)  
-    可能栈溢出
-    进行尾递归优化  
-    def fact(n):  
-    　　return fact_iter(n, 1)
-
-    def fact_iter(num, product)  
-　　　　　if num == 1:  
-    　　　　　　　return product  
-　　　　　return fact_iter(num - 1, num * product)
-
+def fact_iter(num, product)  
+　　if num == 1:  
+    　　　return product  
+　　return fact_iter(num - 1, num * product)
+```
 ## 高级特性
 ### 切片
-* 1
-    
-    切片是左闭右开的
-    切片格式：L[start: stop: step]
+1. 
+切片是**左闭右开**的
+切片格式：`L[start: stop: step]`
+``` Python
+L = list(range(100))
+L
 
-    输入L = list(range(100))
-    输入L
-    输出[0, 1, 2, 3, ..., 99]
+[0, 1, 2, 3, ..., 99]
+```
+例子：
+``` Python
+L[:10]
 
-    例子：
-    L[:10]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  #功能：输出前10个数
 
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  功能：输出前10个数
+L[-10:]
 
-    L[-10:]
+[90, 91, 92, 93, 94, 95, 96, 97, 98, 99]  #功能：输出后10个数
 
-    [90, 91, 92, 93, 94, 95, 96, 97, 98, 99]  功能：输出后10个数
+L[10:20]
 
-    L[10:20]
+[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  #功能：输出前11-20个数
 
-    [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  功能：输出前11-20个数
+L[:10:2]
 
-    L[:10:2]
+[0, 2, 4, 6, 8]  功能：输出隔几个步长的数
 
-    [0, 2, 4, 6, 8]  功能：输出隔几个步长的数
+L[:]
 
-    L[:]
+[0, 1, 2, 3, ..., 99]   功能：原样输出
+```
+2. 
+字符串进行切片
+例如：
+``` Python  
+'ABCDEFG'[:3]
 
-    [0, 1, 2, 3, ..., 99]   功能：原样输出
+'ABC'
 
-* 2
-    
-    字符串进行切片
-    例如：  
-    input:   'ABCDEFG'[:3]
+'ABCDEFG'[::2]
 
-    output:  'ABC'
-
-    input:   'ABCDEFG'[::2]
-
-    output:  'ACEG'
-
+'ACEG'
+```
 ### 迭代
-* 1
+1. 定义：给定一个list或tuple，通过for循环来遍历这个list或tuple，这种遍历成为迭代。在Python中，迭代通过for......in来实现。只要是可迭代对象均可进行迭代，并非一定是list或tuple。
+例如：
+* dict也可迭代
+``` Python
+d = {'a': 1, 'b': 2, 'c': 3}
+    for key in d:
+        print(key)
 
-    定义：给定一个list或tuple，通过for循环来遍历这个list或tuple，这种遍历成为迭代。在Python中，迭代通过for......in来实现。只要是可迭代对象均可进行迭代，并非一定是list或tuple。
+# a   b   c
+```
 
-    例如：
-    ①dict也可迭代
+默认情况下，dict迭代的是key。如果要迭代value，可以用for value in d.values()，如果要同时迭代key和value，可以用for k, v in d.items()
 
-    input:   d = {'a': 1, 'b': 2, 'c': 3}
+* 字符串可迭代
+``` Python
+for ch in 'ABC':  
+    print(ch)   
 
-        for key in d:
-    ...     print(key)
+# A   B   C
+```
+2. 在for循环里，可以引用两个变量，这在Python里十分常见，例如：
+``` Python
+for x, y in [(1, 1), (2, 4), (3, 9)]:  
+    print(x, y)
 
-    output:  
-    a
-    
-    b
-    
-    c
-
-    默认情况下，dict迭代的是key。如果要迭代value，可以用for value in d.values()，如果要同时迭代key和value，可以用for k, v in d.items()
-
-    ②字符串可迭代
-
-    input:   
-    for ch in 'ABC':  
-    　　print(ch)   
-
-    output:
-
-    A
-
-    B
-
-    C
-
-* 2
-    
-    在for循环里，可以引用两个变量，这在Python里十分常见，例如：
-
-    input:  
-    for x, y in [(1, 1), (2, 4), (3, 9)]:  
-    　　print(x, y)
-
-    output:
-
-    1　　1
-
-    2　　4
-
-    3　　9
-
+1　　1
+2　　4
+3　　9
+```
 ### 列表生成式
-* 1
+1. 用于创建list的生成式
 
-    用于创建list的生成式
+例如：
 
-    例如：
+* 要生成list `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`可以用`list(range(1, 11))`
+``` Python
+list(range(1, 11))
 
-    ①要生成list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]可以用list(range(1, 11))
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+* 用循环生成`[1x1, 2x2, 3x3, ..., 10x10]`
+``` Python  
+l = []
+for x in range(1, 11):
+    l.append(x * x)
+print(l)
 
-    input:   list(range(1, 11))
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+* 用列表生成式生成②的结果
+``` Python
+[x*x for x in range(1, 11)]
 
-    output:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+* 在列表生成式中使用if
+``` Python
+[x * x for x in range(1, 11) if x % 2 == 0]
 
-    ②用循环生成[1x1, 2x2, 3x3, ..., 10x10]
+# [4, 16, 36, 64, 100]
+```
 
-    input:  
+* 利用两层循环生成全排列
+``` Python
+[m + n for m in 'ABC' for n in 'XYZ']
 
-    l = []
-
-    for x in range(1, 11):
-    
-    ...    l.append(x * x)
-
-    l
-
-    output:
-
-    [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-
-    ③用列表生成式生成②的结果
-
-    input:  [x*x for x in range(1, 11)]
-
-    output: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-
-    ④
-
-    input:  [x * x for x in range(1, 11) if x % 2 == 0]
-
-    output: [4, 16, 36, 64, 100]
-
-    ⑤利用两层循环生成全排列
-    
-    input:   [m + n for m in 'ABC' for n in 'XYZ']
-
-    output:  ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
-
-* 2
-
-    列表生成式也可以使用两个变量来生成list
+# ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']
+```
+2. 列表生成式也可以使用两个变量来生成list
 
     例如:
 
