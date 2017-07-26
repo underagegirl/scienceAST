@@ -6,6 +6,7 @@ description: 隔壁老王|1303024845@qq.com
 ## dict和set
 ### dict
 1. 
+
 ``` Python
 d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}  
 d['Michael']
@@ -14,22 +15,25 @@ d['Michael']
 # 95
 ```
 2. 
+
 ``` Python
 d['Adam'] = 67  
 d['Adam']
 
-67
+# Result
+# 67
 ```
-3. 
-dict中一个key只能对应一个value
+3. dict中一个key只能对应一个value
 
-4. 
-用in判断key是否存在
+4. 用in判断key是否存在
+
 例如：
+
 ``` Python
 'Thomas' in d
 
-False
+# Result
+# False
 ```
 5. 
 要删除一个key，用pop(key)方法，对应的value也会从dict中删除(是删除key,不是删除value)
